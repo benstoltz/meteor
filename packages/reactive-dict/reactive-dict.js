@@ -50,6 +50,7 @@ _.extend(ReactiveDict.prototype, {
     var self = this;
 
     if ((typeof keyOrObject === 'object') && (value === undefined)) {
+      // Called as `dict.set({...})`
       self._setObject(keyOrObject);
       return;
     }
@@ -60,9 +61,11 @@ _.extend(ReactiveDict.prototype, {
     value = stringify(value);
 
     var oldSerializedValue = 'undefined';
-    if (_.has(self.keys, key)) oldSerializedValue = self.keys[key];
-    if (value === oldSerializedValue)
-      return;
+    if (_.has(self.keys, key)) {
+      oldSerializedValue = self.keys[key];
+      if (value === oldSerializedValue)
+        return;
+    }
     self.keys[key] = value;
 
     self.allDeps.changed();
@@ -75,10 +78,7 @@ _.extend(ReactiveDict.prototype, {
 
   setDefault: function (key, value) {
     var self = this;
-    // for now, explicitly check for undefined, since there is no
-    // ReactiveDict.clear().  Later we might have a ReactiveDict.clear(), in which case
-    // we should check if it has the key.
-    if (self.keys[key] === undefined) {
+    if (! _.has(self.keys, key)) {
       self.set(key, value);
     }
   },
@@ -164,6 +164,25 @@ _.extend(ReactiveDict.prototype, {
       changed(self.keyValueDeps[key]['undefined']);
     });
 
+  },
+
+  delete: function(key) {
+    var self = this;
+    var didRemove = false;
+
+    if (_.has(self.keys, key)) {
+      var oldValue = self.keys[key];
+      delete self.keys[key];
+      changed(self.keyDeps[key]);
+      if (self.keyValueDeps[key]) {
+        changed(self.keyValueDeps[key][oldValue]);
+        changed(self.keyValueDeps[key]['undefined']);
+      }
+      self.allDeps.changed();
+      didRemove = true;
+    }
+
+    return didRemove;
   },
 
   _setObject: function (object) {
