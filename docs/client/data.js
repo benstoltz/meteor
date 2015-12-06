@@ -12,7 +12,7 @@ DocsData = {
   "Accounts.addEmail": {
     "filepath": "accounts-password/password_server.js",
     "kind": "function",
-    "lineno": 847,
+    "lineno": 852,
     "locus": "Server",
     "longname": "Accounts.addEmail",
     "memberof": "Accounts",
@@ -353,7 +353,7 @@ DocsData = {
   "Accounts.removeEmail": {
     "filepath": "accounts-password/password_server.js",
     "kind": "function",
-    "lineno": 930,
+    "lineno": 935,
     "locus": "Server",
     "longname": "Accounts.removeEmail",
     "memberof": "Accounts",
@@ -427,7 +427,7 @@ DocsData = {
   "Accounts.sendEnrollmentEmail": {
     "filepath": "accounts-password/password_server.js",
     "kind": "function",
-    "lineno": 584,
+    "lineno": 589,
     "locus": "Server",
     "longname": "Accounts.sendEnrollmentEmail",
     "memberof": "Accounts",
@@ -460,7 +460,7 @@ DocsData = {
   "Accounts.sendResetPasswordEmail": {
     "filepath": "accounts-password/password_server.js",
     "kind": "function",
-    "lineno": 519,
+    "lineno": 524,
     "locus": "Server",
     "longname": "Accounts.sendResetPasswordEmail",
     "memberof": "Accounts",
@@ -493,7 +493,7 @@ DocsData = {
   "Accounts.sendVerificationEmail": {
     "filepath": "accounts-password/password_server.js",
     "kind": "function",
-    "lineno": 723,
+    "lineno": 728,
     "locus": "Server",
     "longname": "Accounts.sendVerificationEmail",
     "memberof": "Accounts",
@@ -5207,7 +5207,7 @@ DocsData = {
         "optional": true,
         "type": {
           "names": [
-            "Any"
+            "EJSONable"
           ]
         }
       },
@@ -5372,9 +5372,9 @@ DocsData = {
     "summary": "Constructor for a Collection"
   },
   "Mongo.Collection#allow": {
-    "filepath": "mongo/collection.js",
+    "filepath": "allow-deny/allow-deny.js",
     "kind": "function",
-    "lineno": 791,
+    "lineno": 43,
     "locus": "Server",
     "longname": "Mongo.Collection#allow",
     "memberof": "Mongo.Collection",
@@ -5422,9 +5422,9 @@ DocsData = {
     "summary": "Allow users to write directly to this collection from client code, subject to limitations you define."
   },
   "Mongo.Collection#deny": {
-    "filepath": "mongo/collection.js",
+    "filepath": "allow-deny/allow-deny.js",
     "kind": "function",
-    "lineno": 803,
+    "lineno": 58,
     "locus": "Server",
     "longname": "Mongo.Collection#deny",
     "memberof": "Mongo.Collection",
@@ -5474,7 +5474,7 @@ DocsData = {
   "Mongo.Collection#find": {
     "filepath": "mongo/collection.js",
     "kind": "function",
-    "lineno": 261,
+    "lineno": 264,
     "locus": "Anywhere",
     "longname": "Mongo.Collection#find",
     "memberof": "Mongo.Collection",
@@ -5571,7 +5571,7 @@ DocsData = {
   "Mongo.Collection#findOne": {
     "filepath": "mongo/collection.js",
     "kind": "function",
-    "lineno": 287,
+    "lineno": 290,
     "locus": "Anywhere",
     "longname": "Mongo.Collection#findOne",
     "memberof": "Mongo.Collection",
@@ -5659,7 +5659,7 @@ DocsData = {
   "Mongo.Collection#insert": {
     "filepath": "mongo/collection.js",
     "kind": "function",
-    "lineno": 431,
+    "lineno": 429,
     "locus": "Anywhere",
     "longname": "Mongo.Collection#insert",
     "memberof": "Mongo.Collection",
@@ -5692,7 +5692,7 @@ DocsData = {
   "Mongo.Collection#rawCollection": {
     "filepath": "mongo/collection.js",
     "kind": "function",
-    "lineno": 660,
+    "lineno": 681,
     "locus": "Server",
     "longname": "Mongo.Collection#rawCollection",
     "memberof": "Mongo.Collection",
@@ -5705,7 +5705,7 @@ DocsData = {
   "Mongo.Collection#rawDatabase": {
     "filepath": "mongo/collection.js",
     "kind": "function",
-    "lineno": 672,
+    "lineno": 693,
     "locus": "Server",
     "longname": "Mongo.Collection#rawDatabase",
     "memberof": "Mongo.Collection",
@@ -5718,7 +5718,7 @@ DocsData = {
   "Mongo.Collection#remove": {
     "filepath": "mongo/collection.js",
     "kind": "function",
-    "lineno": 455,
+    "lineno": 571,
     "locus": "Anywhere",
     "longname": "Mongo.Collection#remove",
     "memberof": "Mongo.Collection",
@@ -5751,7 +5751,7 @@ DocsData = {
   "Mongo.Collection#update": {
     "filepath": "mongo/collection.js",
     "kind": "function",
-    "lineno": 441,
+    "lineno": 510,
     "locus": "Anywhere",
     "longname": "Mongo.Collection#update",
     "memberof": "Mongo.Collection",
@@ -5821,7 +5821,7 @@ DocsData = {
   "Mongo.Collection#upsert": {
     "filepath": "mongo/collection.js",
     "kind": "function",
-    "lineno": 617,
+    "lineno": 635,
     "locus": "Anywhere",
     "longname": "Mongo.Collection#upsert",
     "memberof": "Mongo.Collection",
@@ -5883,7 +5883,7 @@ DocsData = {
     "filepath": "mongo/collection.js",
     "instancename": "cursor",
     "kind": "class",
-    "lineno": 694,
+    "lineno": 715,
     "longname": "Mongo.Cursor",
     "memberof": "Mongo",
     "name": "Cursor",
@@ -6051,7 +6051,7 @@ DocsData = {
   "Mongo.ObjectID": {
     "filepath": "mongo/collection.js",
     "kind": "class",
-    "lineno": 687,
+    "lineno": 708,
     "locus": "Anywhere",
     "longname": "Mongo.ObjectID",
     "memberof": "Mongo",
@@ -6088,7 +6088,7 @@ DocsData = {
     "options": [],
     "params": [
       {
-        "description": "<p>An object where the keys are package\nnames and the values are version numbers in string form or URLs to a\ngit commit by SHA.  You can only depend on exact versions of NPM\npackages. Example:</p>\n<pre class=\"prettyprint source lang-js\"><code>Npm.depends({\n  moment: &quot;2.8.3&quot;,\n  async: &quot;https://github.com/caolan/async/archive/71fa2638973dafd8761fa5457c472a312cc820fe.tar.gz&quot;\n});</code></pre>",
+        "description": "<p>An object where the keys are package\nnames and the values are one of:</p>\n<ol>\n<li>Version numbers in string form</li>\n<li>Http(s) URLs to a git commit by SHA.   </li>\n<li>Git URLs in the format described <a href=\"https://docs.npmjs.com/files/package.json#git-urls-as-dependencies\">here</a></li>\n<li>Absolute file:// paths</li>\n</ol>\n<p>Https URL example:</p>\n<pre class=\"prettyprint source lang-js\"><code>Npm.depends({\n  moment: &quot;2.8.3&quot;,\n  async: &quot;https://github.com/caolan/async/archive/71fa2638973dafd8761fa5457c472a312cc820fe.tar.gz&quot;\n});</code></pre><p>Git URL example:</p>\n<pre class=\"prettyprint source lang-js\"><code>Npm.depends({\n  moment: &quot;2.8.3&quot;,\n  async: &quot;git+https://github.com/caolan/async#master&quot;\n});</code></pre>",
         "name": "dependencies",
         "type": {
           "names": [
